@@ -23,7 +23,8 @@ public class BookingController {
         try {
             Booking booking = bookingService.bookMovie(data.getUserId(), data.getShowId(), data.getSeatIds());
             response.setState(ResponseStatus.SUCCESS);
-            response.setBooking(booking);
+            response.setBookingId(booking.getId());
+            response.setAmount(booking.getAmount());
         } catch(Exception e) {
             response.setFailureReason(e.getMessage());
             response.setState(ResponseStatus.FAILURE);

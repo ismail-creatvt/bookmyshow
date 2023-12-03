@@ -5,7 +5,8 @@ import lombok.Data;
 
 @Data
 public class BookMovieResponseDTO {
-    private Booking booking;
+    private long bookingId;
+    private int amount;
     private ResponseStatus state;
     private String failureReason;
 }
